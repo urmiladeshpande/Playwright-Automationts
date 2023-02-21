@@ -22,5 +22,3 @@ test('Example to demonstrate text input and basic assertions', async ({ page }) 
 
   await expect(page.locator('div#flash')).toContainText('You logged out of the secure area!')
 })
-
-

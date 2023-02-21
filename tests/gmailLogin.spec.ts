@@ -10,11 +10,13 @@ test('Example to demonstrate text input and basic assertions with Gmail', async 
 
   await page.click('//*[@id="identifierNext"]/div/button')
 
+  await expect(page.locator('//*[@id="identifierNext"]/div/button')).toBeVisible({ timeout: 2000 })
+
   await page.fill('//*[@id="password"]/div[1]/div/div[1]/input', 'Luckyboy@77')
 
   await page.click('//*[@id="passwordNext"]/div/button')
 
-  await expect(page.locator('//*[@id="material-bar-custom-product-name"]/a')).toBeVisible({ timeout: 5000 })
+  await expect(page.locator('//*[@id="material-bar-custom-product-name"]/a')).toBeVisible({ timeout: 6000 })
 
   await expect(page.locator('//*[@id="material-bar-custom-product-name"]/a')).toContainText('Gmail Help')
 
